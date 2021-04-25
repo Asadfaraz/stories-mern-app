@@ -1,10 +1,14 @@
 import express from "express";
-import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 
+import postRoutes from "./routes/posts.js";
+
 // initializing app using express
 const app = express();
+
+// post route from routes folder
+app.use("/posts", postRoutes);
 
 // using body-parser as middlware to parse the text from user into json before giving it to handler
 // app.use(bodyParser.json({ limit: "30mb", extended: true })); *BODY PARSER IS DEPRECATED*
@@ -15,8 +19,7 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(cors());
 
 // connectin url from mongo db --- This will later moved to secret file before deploying ---
-const CONNECTION_URL =
-  "mongodb+srv://storiesapp:storiesapp123@cluster0.w7rk2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const CONNECTION_URL = "******";
 
 // assigning port to listen to server
 const PORT = process.env.PORT || 5000;
