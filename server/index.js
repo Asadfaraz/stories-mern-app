@@ -19,7 +19,7 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(cors());
 
 // connectin url from mongo db --- This will later moved to secret file before deploying ---
-const CONNECTION_URL = "******";
+const CONNECTION_URL = "*****";
 
 // assigning port to listen to server
 const PORT = process.env.PORT || 5000;
