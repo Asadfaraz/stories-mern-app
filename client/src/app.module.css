@@ -1,0 +1,49 @@
+.container {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  width: 70%;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 20px;
+  background-color: white;
+
+  box-shadow: 1px 2px 5px 0 rgb(196, 194, 194);
+  border-radius: 10px;
+}
+.headItems {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.headItems h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  margin: 0;
+  color: rgb(44, 179, 241);
+}
+.headItems img {
+  width: 60px;
+  object-fit: contain;
+}
+/* header completed */
+
+.appComponents {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px;
+}
+
+.postComp {
+  flex-grow: 2;
+}
+.formComp {
+  flex-grow: 1;
+}
