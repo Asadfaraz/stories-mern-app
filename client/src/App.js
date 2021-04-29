@@ -10,7 +10,7 @@ const App = () => {
     <div className={classes.container}>
       <header>
         <div className={classes.headItems}>
-          <h2>Memories</h2>
+          <h2>Stories</h2>
           <img src={memories} alt="memories" />
         </div>
       </header>
