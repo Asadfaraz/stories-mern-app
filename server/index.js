@@ -7,9 +7,6 @@ import postRoutes from "./routes/posts.js";
 // initializing app using express
 const app = express();
 
-// post route from routes folder
-app.use("/posts", postRoutes);
-
 // using body-parser as middlware to parse the text from user into json before giving it to handler
 // app.use(bodyParser.json({ limit: "30mb", extended: true })); *BODY PARSER IS DEPRECATED*
 // USE THIS INSTEAD OF BODY PARSER NOW
@@ -18,7 +15,11 @@ app.use(express.json({ limit: "30mb", extended: true }));
 // using cors as middlware to Cross-Origin Resource Sharing
 app.use(cors());
 
+// post route from routes folder
+app.use("/posts", postRoutes);
+
 // connectin url from mongo db --- This will later moved to secret file before deploying ---
+// mongodb+srv://storiesapp:storiesapp@cluster0.w7rk2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 const CONNECTION_URL = "*****";
 
 // assigning port to listen to server
