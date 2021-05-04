@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FileBase64 from "react-file-base64";
+import classes from "./formStyle.module.css";
 
 const Form = () => {
   // useSTate hook
@@ -20,7 +21,7 @@ const Form = () => {
   };
 
   return (
-    <section>
+    <>
       <form autoComplete="off" noValidate onSubmit={handleSubmit}>
         <h4>Creating a Story</h4>
         <input
@@ -57,7 +58,7 @@ const Form = () => {
         />
 
         {/* file input */}
-        <div>
+        <div className={classes.filediv}>
           <FileBase64
             type="file"
             multiple={false}
@@ -71,7 +72,7 @@ const Form = () => {
         <input type="submit" value="Submit" />
         <input type="button" value="Clear" onClick={clear} />
       </form>
-    </section>
+    </>
   );
 };
 
